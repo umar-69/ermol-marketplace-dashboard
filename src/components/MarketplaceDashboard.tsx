@@ -34,7 +34,8 @@ interface DataGapItemProps {
 // This would be replaced with actual data from the Excel file
 
 // GMV Monthly Data (2024-2025)
-const gmvMonthlyData = [
+// Current data is used as projected data
+const projectedGmvMonthlyData = [
   { month: "Apr '24", value: 0 },
   { month: "May '24", value: 0 },
   { month: "Jun '24", value: 642 },
@@ -53,8 +54,22 @@ const gmvMonthlyData = [
   { month: "Jul '25", value: 40000 },
 ];
 
+// Placeholder for actual GMV data (to be provided)
+const actualGmvMonthlyData = [
+  { month: "Apr '24", value: 0 },
+  { month: "May '24", value: 0 },
+  { month: "Jun '24", value: 642 },
+  { month: "Jul '24", value: 2500 },
+  { month: "Aug '24", value: 6000 },
+  { month: "Sep '24", value: 9000 },
+  { month: "Oct '24", value: 16529 },
+  { month: "Nov '24", value: 14000 },
+  { month: "Dec '24", value: 9531 },
+  // Remaining months would be filled with actual data when provided
+];
+
 // Bookings Monthly Data
-const bookingsMonthlyData = [
+const projectedBookingsMonthlyData = [
   { month: "Apr '24", value: 0 },
   { month: "May '24", value: 0 },
   { month: "Jun '24", value: 18 },
@@ -73,8 +88,22 @@ const bookingsMonthlyData = [
   { month: "Jul '25", value: 1104 },
 ];
 
+// Placeholder for actual bookings data (to be provided)
+const actualBookingsMonthlyData = [
+  { month: "Apr '24", value: 0 },
+  { month: "May '24", value: 0 },
+  { month: "Jun '24", value: 18 },
+  { month: "Jul '24", value: 69 },
+  { month: "Aug '24", value: 166 },
+  { month: "Sep '24", value: 249 },
+  { month: "Oct '24", value: 456 },
+  { month: "Nov '24", value: 387 },
+  { month: "Dec '24", value: 263 },
+  // Remaining months would be filled with actual data when provided
+];
+
 // User Growth Data
-const userGrowthData = [
+const projectedUserGrowthData = [
   { month: "Apr '24", learners: 1200, instructors: 12 },
   { month: "May '24", learners: 1500, instructors: 20 },
   { month: "Jun '24", learners: 1800, instructors: 35 },
@@ -89,51 +118,106 @@ const userGrowthData = [
   { month: "Mar '25", learners: 8787, instructors: 480 },
 ];
 
+// Placeholder for actual user growth data (to be provided)
+const actualUserGrowthData = [
+  { month: "Apr '24", learners: 1200, instructors: 12 },
+  { month: "May '24", learners: 1500, instructors: 20 },
+  { month: "Jun '24", learners: 1800, instructors: 35 },
+  { month: "Jul '24", learners: 2200, instructors: 50 },
+  { month: "Aug '24", learners: 2800, instructors: 70 },
+  { month: "Sep '24", learners: 3200, instructors: 85 },
+  { month: "Oct '24", learners: 3800, instructors: 110 },
+  { month: "Nov '24", learners: 4400, instructors: 135 },
+  { month: "Dec '24", learners: 4819, instructors: 158 },
+  // Remaining months would be filled with actual data when provided
+];
+
 // Annual GMV Comparison
-const annualGMVData = [
+const projectedAnnualGMVData = [
   { name: '2024', value: 66700 },
   { name: '2025 (Projected)', value: 302600 },
 ];
 
+const actualAnnualGMVData = [
+  { name: '2024', value: 66700 },
+  // 2025 actual data will be provided later
+];
+
 // Instructor Utilization
-const utilizationData = [
+const projectedUtilizationData = [
+  { name: 'Hours Taught', value: 1500 },
+  { name: 'Unused Capacity', value: 46500 },
+];
+
+const actualUtilizationData = [
   { name: 'Hours Taught', value: 1500 },
   { name: 'Unused Capacity', value: 46500 },
 ];
 
 // Operational Metrics
-const operationalMetricsData = [
+const projectedOperationalMetricsData = [
+  { name: 'Commission per Lesson', value: 1.81 },
+  { name: 'Operational Cost per Lesson', value: 6.80 },
+];
+
+const actualOperationalMetricsData = [
   { name: 'Commission per Lesson', value: 1.81 },
   { name: 'Operational Cost per Lesson', value: 6.80 },
 ];
 
 // Supply/Demand Balance
-const supplyDemandData = [
+const projectedSupplyDemandData = [
+  { name: 'Learners (Active)', value: 1400 },
+  { name: 'Instructors (Active)', value: 480 },
+];
+
+const actualSupplyDemandData = [
   { name: 'Learners (Active)', value: 1400 },
   { name: 'Instructors (Active)', value: 480 },
 ];
 
 // CAC & LTV Data
-const acquisitionData = [
+const projectedAcquisitionData = [
+  { name: 'Learner CAC', value: 0.5 },
+  { name: 'Instructor CAC', value: 2.5 },
+  { name: 'Learner LTV (Est.)', value: 18 },
+];
+
+const actualAcquisitionData = [
   { name: 'Learner CAC', value: 0.5 },
   { name: 'Instructor CAC', value: 2.5 },
   { name: 'Learner LTV (Est.)', value: 18 },
 ];
 
 // Booking Status
-const bookingStatusData = [
+const projectedBookingStatusData = [
+  { name: 'Completed Lessons', value: 91.7 },
+  { name: 'Cancelled Lessons', value: 8.3 },
+];
+
+const actualBookingStatusData = [
   { name: 'Completed Lessons', value: 91.7 },
   { name: 'Cancelled Lessons', value: 8.3 },
 ];
 
 // LTV:CAC Comparison
-const ltvCacData = [
+const projectedLtvCacData = [
+  { name: 'Actual (36:1)', value: 36 },
+  { name: 'Benchmark (3:1)', value: 3 },
+];
+
+const actualLtvCacData = [
   { name: 'Actual (36:1)', value: 36 },
   { name: 'Benchmark (3:1)', value: 3 },
 ];
 
 // Active vs Inactive Users
-const activeUsersData = [
+const projectedActiveUsersData = [
+  { name: 'Active Learners (MAU)', value: 1400 },
+  { name: 'Inactive Learners', value: 7387 },
+];
+
+const actualActiveUsersData = [
   { name: 'Active Learners (MAU)', value: 1400 },
   { name: 'Inactive Learners', value: 7387 },
 ];
@@ -145,6 +229,12 @@ const GREEN_COLOR = '#4CAF50';
 
 const MarketplaceDashboard = () => {
   const [activeTab, setActiveTab] = useState('overview');
+  const [showProjected, setShowProjected] = useState(true);
+
+  // Helper function to get the correct data based on projection toggle
+  const getData = <T extends unknown>(projectedData: T, actualData: T): T => {
+    return showProjected ? projectedData : actualData;
+  };
 
   const tabs = [
     { id: 'overview', name: 'Overview' },
@@ -188,502 +278,552 @@ const MarketplaceDashboard = () => {
     </div>
   );
 
-  const renderOverviewTab = () => (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <KPICard 
-          title="2024 GMV" 
-          value="£66.7K" 
-          subtitle="→ £302.6K in 2025 (Projected)" 
-          color="green"
+  // Toggle switch component for projection
+  const ProjectionToggle = () => (
+    <div className="flex items-center space-x-2">
+      <span className={`text-sm font-medium ${!showProjected ? 'text-blue-600' : 'text-gray-500'}`}>
+        Actual
+      </span>
+      <label className="relative inline-flex items-center cursor-pointer">
+        <input 
+          type="checkbox" 
+          className="sr-only peer" 
+          checked={showProjected}
+          onChange={() => setShowProjected(!showProjected)}
         />
-        <KPICard 
-          title="Lessons Completed (2024)" 
-          value="~1,800" 
-          subtitle="~250/month by Dec '24"
-          color="blue"
-        />
-        <KPICard 
-          title="Total Learners" 
-          value="8,787" 
-          subtitle="As of Mar '25"
-          color="purple"
-        />
-        <KPICard 
-          title="Instructor Utilization" 
-          value="~3%" 
-          subtitle="Significant spare capacity"
-          color="red"
-        />
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <ChartContainer title="Monthly GMV Growth (£)">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={gmvMonthlyData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip formatter={(value) => `£${value}`} />
-              <Legend />
-              <Line type="monotone" dataKey="value" stroke="#0088FE" name="GMV (£)" strokeWidth={2} />
-            </LineChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-        
-        <ChartContainer title="Annual GMV Comparison">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={annualGMVData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip formatter={(value) => `£${value}`} />
-              <Bar dataKey="value" fill="#4CAF50" name="GMV (£)" />
-            </BarChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <ChartContainer title="Supply/Demand Balance (Active Users)">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={supplyDemandData}
-                cx="50%"
-                cy="50%"
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-                label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-              >
-                {supplyDemandData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip formatter={(value) => value} />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-        
-        <ChartContainer title="Booking Status">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={bookingStatusData}
-                cx="50%"
-                cy="50%"
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-                label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-              >
-                <Cell fill={GREEN_COLOR} />
-                <Cell fill={RED_COLOR} />
-              </Pie>
-              <Tooltip formatter={(value) => `${value}%`} />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-      </div>
+        <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+      </label>
+      <span className={`text-sm font-medium ${showProjected ? 'text-blue-600' : 'text-gray-500'}`}>
+        Projected
+      </span>
     </div>
   );
 
-  const renderGrowthTab = () => (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <KPICard 
-          title="GMV Growth" 
-          value="354%" 
-          subtitle="Projected YoY (2024 to 2025)" 
-          color="green"
-        />
-        <KPICard 
-          title="Bookings Growth" 
-          value="~4.5×" 
-          subtitle="1,800 to 8,300 lessons"
-          color="blue"
-        />
-        <KPICard 
-          title="User Growth" 
-          value="633%" 
-          subtitle="Apr '24 to Mar '25 (Learners)"
-          color="purple"
-        />
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <ChartContainer title="Monthly Bookings Growth">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={bookingsMonthlyData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="value" stroke="#8884d8" name="Lessons" strokeWidth={2} />
-            </LineChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-        
-        <ChartContainer title="User Growth">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={userGrowthData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="learners" stroke="#8884d8" name="Learners" strokeWidth={2} />
-              <Line type="monotone" dataKey="instructors" stroke="#82ca9d" name="Instructors" strokeWidth={2} />
-            </LineChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <ChartContainer title="Active vs Inactive Learners">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={activeUsersData}
-                cx="50%"
-                cy="50%"
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-                label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-              >
-                <Cell fill={GREEN_COLOR} />
-                <Cell fill="#D3D3D3" />
-              </Pie>
-              <Tooltip formatter={(value) => value} />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-        
-        <ChartContainer title="Learner to Instructor Ratio">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={[
-              { name: 'Total Sign-ups', ratio: 30 },
-              { name: 'Active Users', ratio: 2.9 }
-            ]}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip formatter={(value) => `${value}:1`} />
-              <Bar dataKey="ratio" fill="#FFBB28" name="Learners per Instructor" />
-            </BarChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-      </div>
-    </div>
-  );
+  const renderOverviewTab = () => {
+    const gmvData = getData(projectedGmvMonthlyData, actualGmvMonthlyData);
+    const annualGMVData = getData(projectedAnnualGMVData, actualAnnualGMVData);
+    const supplyDemandData = getData(projectedSupplyDemandData, actualSupplyDemandData);
+    const bookingStatusData = getData(projectedBookingStatusData, actualBookingStatusData);
 
-  const renderEconomicsTab = () => (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <KPICard 
-          title="Take Rate" 
-          value="5%" 
-          subtitle="£1.81 per £36.24 lesson" 
-          color="green"
-        />
-        <KPICard 
-          title="LTV:CAC Ratio" 
-          value="36:1" 
-          subtitle="vs. industry benchmark of 3:1"
-          color="blue"
-        />
-        <KPICard 
-          title="Payback Period" 
-          value="< 1 week" 
-          subtitle="for learners"
-          color="purple"
-        />
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <ChartContainer title="Unit Economics Per Lesson">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart layout="vertical" data={operationalMetricsData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis type="number" />
-              <YAxis dataKey="name" type="category" />
-              <Tooltip formatter={(value) => `£${value}`} />
-              <Bar dataKey="value" fill="#0088FE" />
-            </BarChart>
-          </ResponsiveContainer>
-        </ChartContainer>
+    return (
+      <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+          <KPICard 
+            title="2024 GMV" 
+            value="£66.7K" 
+            subtitle={`→ £${showProjected ? '302.6K' : '(Actual data pending)' } in 2025 ${showProjected ? '(Projected)' : ''}`} 
+            color="green"
+          />
+          <KPICard 
+            title="Lessons Completed (2024)" 
+            value="~1,800" 
+            subtitle="~250/month by Dec '24"
+            color="blue"
+          />
+          <KPICard 
+            title="Total Learners" 
+            value={showProjected ? "8,787" : "(Actual data pending)"}
+            subtitle={`As of Mar '25 ${showProjected ? '(Projected)' : ''}`}
+            color="purple"
+          />
+          <KPICard 
+            title="Instructor Utilization" 
+            value="~3%" 
+            subtitle="Significant spare capacity"
+            color="red"
+          />
+        </div>
         
-        <ChartContainer title="Acquisition Costs & LTV">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={acquisitionData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip formatter={(value) => `£${value}`} />
-              <Bar dataKey="value" fill="#00C49F" />
-            </BarChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <ChartContainer title="LTV:CAC Comparison">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={ltvCacData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="value" name="Ratio" fill="#4CAF50" />
-            </BarChart>
-          </ResponsiveContainer>
-        </ChartContainer>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <ChartContainer title={`Monthly GMV Growth (£) ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={gmvData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip formatter={(value) => `£${value}`} />
+                <Legend />
+                <Line type="monotone" dataKey="value" stroke="#0088FE" name="GMV (£)" strokeWidth={2} />
+              </LineChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+          
+          <ChartContainer title={`Annual GMV Comparison ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={annualGMVData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip formatter={(value) => `£${value}`} />
+                <Bar dataKey="value" fill="#4CAF50" name="GMV (£)" />
+              </BarChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </div>
         
-        <ChartContainer title="Profitability Gap">
-          <ResponsiveContainer width="100%" height="100%">
-            <RadialBarChart 
-              cx="50%" 
-              cy="50%" 
-              innerRadius="20%" 
-              outerRadius="80%" 
-              barSize={10} 
-              data={[
-                { name: 'Revenue per Lesson', value: 1.81, fill: GREEN_COLOR },
-                { name: 'Cost per Lesson', value: 6.80, fill: RED_COLOR }
-              ]}
-            >
-              <RadialBar
-                label={{ position: 'insideStart', fill: '#fff' }}
-                background
-                dataKey="value"
-              />
-              <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" align="right" />
-              <Tooltip formatter={(value) => `£${value}`} />
-            </RadialBarChart>
-          </ResponsiveContainer>
-        </ChartContainer>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <ChartContainer title={`Supply/Demand Balance (Active Users) ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={supplyDemandData}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="value"
+                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                >
+                  {supplyDemandData.map((entry: any, index: number) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip formatter={(value) => value} />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+          
+          <ChartContainer title={`Booking Status ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={bookingStatusData}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="value"
+                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                >
+                  <Cell fill={GREEN_COLOR} />
+                  <Cell fill={RED_COLOR} />
+                </Pie>
+                <Tooltip formatter={(value) => `${value}%`} />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
-  const renderSupplyDemandTab = () => (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <KPICard 
-          title="Active Learners" 
-          value="~1,400" 
-          subtitle="Monthly Active Users" 
-          color="blue"
-        />
-        <KPICard 
-          title="Active Instructors" 
-          value="~480" 
-          subtitle="Available for bookings"
-          color="green"
-        />
-        <KPICard 
-          title="Instructor Onboarding" 
-          value="3 min" 
-          subtitle="Time to complete sign-up"
-          color="purple"
-        />
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <ChartContainer title="Instructor Utilization">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={utilizationData}
-                cx="50%"
-                cy="50%"
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-                label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-              >
-                <Cell fill={GREEN_COLOR} />
-                <Cell fill="#D3D3D3" />
-              </Pie>
-              <Tooltip formatter={(value) => `${value} hours`} />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-        
-        <ChartContainer title="Supply/Demand Balance Evolution">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={userGrowthData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="learners" stroke="#8884d8" name="Learners" strokeWidth={2} />
-              <Line type="monotone" dataKey="instructors" stroke="#82ca9d" name="Instructors" strokeWidth={2} />
-            </LineChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-      </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <ChartContainer title="Lessons per Active Learner (Monthly)">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={[
-              { name: 'Current', value: 1.07 },
-              { name: 'Target', value: 4 }
-            ]}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="value" name="Lessons" fill="#FF8042" />
-            </BarChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-        
-        <ChartContainer title="Booking Status">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={bookingStatusData}
-                cx="50%"
-                cy="50%"
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-                label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
-              >
-                <Cell fill={GREEN_COLOR} />
-                <Cell fill={RED_COLOR} />
-              </Pie>
-              <Tooltip formatter={(value) => `${value}%`} />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-      </div>
-    </div>
-  );
+  const renderGrowthTab = () => {
+    const bookingsData = getData(projectedBookingsMonthlyData, actualBookingsMonthlyData);
+    const userGrowthData = getData(projectedUserGrowthData, actualUserGrowthData);
+    const activeUsersData = getData(projectedActiveUsersData, actualActiveUsersData);
 
-  const renderEngagementTab = () => (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <KPICard 
-          title="MAU (Learners)" 
-          value="~1,400" 
-          subtitle="~15-20% of total users" 
-          color="blue"
-        />
-        <KPICard 
-          title="Lessons per Active User" 
-          value="~1.07" 
-          subtitle="per month"
-          color="green"
-        />
-        <KPICard 
-          title="Cancellation Rate" 
-          value="8.3%" 
-          subtitle="of booked lessons"
-          color="red"
-        />
+    return (
+      <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <KPICard 
+            title="GMV Growth" 
+            value="354%" 
+            subtitle={`${showProjected ? 'Projected' : 'Actual'} YoY (2024 to 2025)`}
+            color="green"
+          />
+          <KPICard 
+            title="Bookings Growth" 
+            value="~4.5×" 
+            subtitle="1,800 to 8,300 lessons"
+            color="blue"
+          />
+          <KPICard 
+            title="User Growth" 
+            value="633%" 
+            subtitle={`Apr '24 to Mar '25 (Learners) ${showProjected ? '(Projected)' : '(Actual)'}`}
+            color="purple"
+          />
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <ChartContainer title={`Monthly Bookings Growth ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={bookingsData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="value" stroke="#8884d8" name="Lessons" strokeWidth={2} />
+              </LineChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+          
+          <ChartContainer title={`User Growth ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={userGrowthData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="learners" stroke="#8884d8" name="Learners" strokeWidth={2} />
+                <Line type="monotone" dataKey="instructors" stroke="#82ca9d" name="Instructors" strokeWidth={2} />
+              </LineChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <ChartContainer title={`Active vs Inactive Learners ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={activeUsersData}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="value"
+                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                >
+                  <Cell fill={GREEN_COLOR} />
+                  <Cell fill="#D3D3D3" />
+                </Pie>
+                <Tooltip formatter={(value) => value} />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+          
+          <ChartContainer title={`Learner to Instructor Ratio ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={[
+                { name: 'Total Sign-ups', ratio: 30 },
+                { name: 'Active Users', ratio: 2.9 }
+              ]}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip formatter={(value) => `${value}:1`} />
+                <Bar dataKey="ratio" fill="#FFBB28" name="Learners per Instructor" />
+              </BarChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </div>
       </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <ChartContainer title="Active vs Inactive Learners">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={activeUsersData}
-                cx="50%"
-                cy="50%"
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-                label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+    );
+  };
+
+  const renderEconomicsTab = () => {
+    const operationalMetricsData = getData(projectedOperationalMetricsData, actualOperationalMetricsData);
+    const acquisitionData = getData(projectedAcquisitionData, actualAcquisitionData);
+    const ltvCacData = getData(projectedLtvCacData, actualLtvCacData);
+
+    return (
+      <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <KPICard 
+            title="Take Rate" 
+            value="5%" 
+            subtitle={`£1.81 per £36.24 lesson ${showProjected ? '(Projected)' : '(Actual)'}`}
+            color="green"
+          />
+          <KPICard 
+            title="LTV:CAC Ratio" 
+            value="36:1" 
+            subtitle="vs. industry benchmark of 3:1"
+            color="blue"
+          />
+          <KPICard 
+            title="Payback Period" 
+            value="< 1 week" 
+            subtitle="for learners"
+            color="purple"
+          />
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <ChartContainer title={`Unit Economics Per Lesson ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart layout="vertical" data={operationalMetricsData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis type="number" />
+                <YAxis dataKey="name" type="category" />
+                <Tooltip formatter={(value) => `£${value}`} />
+                <Bar dataKey="value" fill="#0088FE" />
+              </BarChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+          
+          <ChartContainer title={`Acquisition Costs & LTV ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={acquisitionData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip formatter={(value) => `£${value}`} />
+                <Bar dataKey="value" fill="#00C49F" />
+              </BarChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <ChartContainer title={`LTV:CAC Comparison ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={ltvCacData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Bar dataKey="value" name="Ratio" fill="#4CAF50" />
+              </BarChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+          
+          <ChartContainer title={`Profitability Gap ${showProjected ? '(Projected)' : '(Actual)'}`}>
+            <ResponsiveContainer width="100%" height="100%">
+              <RadialBarChart 
+                cx="50%" 
+                cy="50%" 
+                innerRadius="20%" 
+                outerRadius="80%" 
+                barSize={10} 
+                data={[
+                  { name: 'Revenue per Lesson', value: 1.81, fill: GREEN_COLOR },
+                  { name: 'Cost per Lesson', value: 6.80, fill: RED_COLOR }
+                ]}
               >
-                <Cell fill={GREEN_COLOR} />
-                <Cell fill="#D3D3D3" />
-              </Pie>
-              <Tooltip formatter={(value) => value} />
-              <Legend />
-            </PieChart>
-          </ResponsiveContainer>
-        </ChartContainer>
-        
-        <ChartContainer title="Engagement Gap">
-          <ResponsiveContainer width="100%" height="100%">
-            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={[
-              { subject: 'Instructor Utilization', A: 3, fullMark: 100 },
-              { subject: 'Learner Activation Rate', A: 20, fullMark: 100 },
-              { subject: 'Lessons per Active User', A: 27, fullMark: 100 },
-              { subject: 'Repeat Booking Rate', A: 40, fullMark: 100 },
-              { subject: 'Retention (est.)', A: 35, fullMark: 100 },
-            ]}>
-              <PolarGrid />
-              <PolarAngleAxis dataKey="subject" />
-              <PolarRadiusAxis angle={30} domain={[0, 100]} />
-              <Radar name="Current %" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-              <Legend />
-            </RadarChart>
-          </ResponsiveContainer>
-        </ChartContainer>
+                <RadialBar
+                  label={{ position: 'insideStart', fill: '#fff' }}
+                  background
+                  dataKey="value"
+                />
+                <Legend iconSize={10} width={120} height={140} layout="vertical" verticalAlign="middle" align="right" />
+                <Tooltip formatter={(value) => `£${value}`} />
+              </RadialBarChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </div>
       </div>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <ChartContainer title="Monthly Active Users Trend (Est.)">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={[
-              { month: "Jun '24", value: 50 },
-              { month: "Jul '24", value: 150 },
-              { month: "Aug '24", value: 300 },
-              { month: "Sep '24", value: 500 },
-              { month: "Oct '24", value: 800 },
-              { month: "Nov '24", value: 1100 },
-              { month: "Dec '24", value: 1200 },
-              { month: "Jan '25", value: 1300 },
-              { month: "Feb '25", value: 1350 },
-              { month: "Mar '25", value: 1400 },
-            ]}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="value" stroke="#0088FE" name="MAU" strokeWidth={2} />
-            </LineChart>
-          </ResponsiveContainer>
-        </ChartContainer>
+    );
+  };
+
+  const renderSupplyDemandTab = () => {
+    const utilizationData = getData(projectedUtilizationData, actualUtilizationData);
+    const userGrowthData = getData(projectedUserGrowthData, actualUserGrowthData);
+    const bookingStatusData = getData(projectedBookingStatusData, actualBookingStatusData);
+
+    return (
+      <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <KPICard 
+            title="Active Learners" 
+            value="~1,400" 
+            subtitle="Monthly Active Users" 
+            color="blue"
+          />
+          <KPICard 
+            title="Active Instructors" 
+            value="~480" 
+            subtitle="Available for bookings"
+            color="green"
+          />
+          <KPICard 
+            title="Instructor Onboarding" 
+            value="3 min" 
+            subtitle="Time to complete sign-up"
+            color="purple"
+          />
+        </div>
         
-        <ChartContainer title="Booking Status Evolution (Est.)">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={[
-              { month: 'Oct', completed: 300, cancelled: 30 },
-              { month: 'Nov', completed: 350, cancelled: 37 },
-              { month: 'Dec', completed: 240, cancelled: 23 },
-              { month: 'Jan', completed: 450, cancelled: 47 },
-              { month: 'Feb', completed: 550, cancelled: 57 },
-              { month: 'Mar', completed: 630, cancelled: 60 },
-            ]}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="completed" stackId="a" fill={GREEN_COLOR} name="Completed" />
-              <Bar dataKey="cancelled" stackId="a" fill={RED_COLOR} name="Cancelled" />
-            </BarChart>
-          </ResponsiveContainer>
-        </ChartContainer>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <ChartContainer title="Instructor Utilization">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={utilizationData}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="value"
+                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                >
+                  <Cell fill={GREEN_COLOR} />
+                  <Cell fill="#D3D3D3" />
+                </Pie>
+                <Tooltip formatter={(value) => `${value} hours`} />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+          
+          <ChartContainer title="Supply/Demand Balance Evolution">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={userGrowthData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="learners" stroke="#8884d8" name="Learners" strokeWidth={2} />
+                <Line type="monotone" dataKey="instructors" stroke="#82ca9d" name="Instructors" strokeWidth={2} />
+              </LineChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <ChartContainer title="Lessons per Active Learner (Monthly)">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={[
+                { name: 'Current', value: 1.07 },
+                { name: 'Target', value: 4 }
+              ]}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Bar dataKey="value" name="Lessons" fill="#FF8042" />
+              </BarChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+          
+          <ChartContainer title="Booking Status">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={bookingStatusData}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="value"
+                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                >
+                  <Cell fill={GREEN_COLOR} />
+                  <Cell fill={RED_COLOR} />
+                </Pie>
+                <Tooltip formatter={(value) => `${value}%`} />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
+
+  const renderEngagementTab = () => {
+    const activeUsersData = getData(projectedActiveUsersData, actualActiveUsersData);
+    
+    return (
+      <div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          <KPICard 
+            title="MAU (Learners)" 
+            value="~1,400" 
+            subtitle="~15-20% of total users" 
+            color="blue"
+          />
+          <KPICard 
+            title="Lessons per Active User" 
+            value="~1.07" 
+            subtitle="per month"
+            color="green"
+          />
+          <KPICard 
+            title="Cancellation Rate" 
+            value="8.3%" 
+            subtitle="of booked lessons"
+            color="red"
+          />
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <ChartContainer title="Active vs Inactive Learners">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={activeUsersData}
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="value"
+                  label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
+                >
+                  <Cell fill={GREEN_COLOR} />
+                  <Cell fill="#D3D3D3" />
+                </Pie>
+                <Tooltip formatter={(value) => value} />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+          
+          <ChartContainer title="Engagement Gap">
+            <ResponsiveContainer width="100%" height="100%">
+              <RadarChart cx="50%" cy="50%" outerRadius="80%" data={[
+                { subject: 'Instructor Utilization', A: 3, fullMark: 100 },
+                { subject: 'Learner Activation Rate', A: 20, fullMark: 100 },
+                { subject: 'Lessons per Active User', A: 27, fullMark: 100 },
+                { subject: 'Repeat Booking Rate', A: 40, fullMark: 100 },
+                { subject: 'Retention (est.)', A: 35, fullMark: 100 },
+              ]}>
+                <PolarGrid />
+                <PolarAngleAxis dataKey="subject" />
+                <PolarRadiusAxis angle={30} domain={[0, 100]} />
+                <Radar name="Current %" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                <Legend />
+              </RadarChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <ChartContainer title="Monthly Active Users Trend (Est.)">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={[
+                { month: "Jun '24", value: 50 },
+                { month: "Jul '24", value: 150 },
+                { month: "Aug '24", value: 300 },
+                { month: "Sep '24", value: 500 },
+                { month: "Oct '24", value: 800 },
+                { month: "Nov '24", value: 1100 },
+                { month: "Dec '24", value: 1200 },
+                { month: "Jan '25", value: 1300 },
+                { month: "Feb '25", value: 1350 },
+                { month: "Mar '25", value: 1400 },
+              ]}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="value" stroke="#0088FE" name="MAU" strokeWidth={2} />
+              </LineChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+          
+          <ChartContainer title="Booking Status Evolution (Est.)">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={[
+                { month: 'Oct', completed: 300, cancelled: 30 },
+                { month: 'Nov', completed: 350, cancelled: 37 },
+                { month: 'Dec', completed: 240, cancelled: 23 },
+                { month: 'Jan', completed: 450, cancelled: 47 },
+                { month: 'Feb', completed: 550, cancelled: 57 },
+                { month: 'Mar', completed: 630, cancelled: 60 },
+              ]}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="month" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="completed" stackId="a" fill={GREEN_COLOR} name="Completed" />
+                <Bar dataKey="cancelled" stackId="a" fill={RED_COLOR} name="Cancelled" />
+              </BarChart>
+            </ResponsiveContainer>
+          </ChartContainer>
+        </div>
+      </div>
+    );
+  };
 
   const renderGapsTab = () => (
     <div>
@@ -762,10 +902,15 @@ const MarketplaceDashboard = () => {
     <div className="min-h-screen bg-gray-100 p-4">
       <div className="max-w-7xl mx-auto">
         <div className="bg-white p-6 rounded-lg shadow-lg mb-6">
-          <h1 className="text-2xl font-bold text-gray-800 mb-2">ErmoL Marketplace Data Room</h1>
-          <p className="text-gray-600 mb-4">
-            Comprehensive visualization of key marketplace metrics and performance indicators
-          </p>
+          <div className="flex justify-between items-center mb-4">
+            <div>
+              <h1 className="text-2xl font-bold text-gray-800 mb-2">ErmoL Marketplace Data Room</h1>
+              <p className="text-gray-600">
+                Comprehensive visualization of key marketplace metrics and performance indicators
+              </p>
+            </div>
+            <ProjectionToggle />
+          </div>
           
           <div className="border-b border-gray-200 mb-4">
             <div className="flex overflow-x-auto">
@@ -791,7 +936,7 @@ const MarketplaceDashboard = () => {
         </div>
         
         <div className="text-xs text-gray-500 text-center mt-4">
-          Data as of March 2025 | Based on platform metrics and financial projections
+          Data as of March 2025 | {showProjected ? 'Projected' : 'Actual'} metrics and financial data
         </div>
       </div>
     </div>
