@@ -69,7 +69,7 @@ const projectedGmvMonthlyData: MonthlyDataItem[] = [
 ];
 
 // Placeholder for actual GMV data (to be provided)
-const actualGmvMonthlyData = [
+const actualGmvMonthlyData: MonthlyDataItem[] = [
   { month: "Apr '24", value: 0 },
   { month: "May '24", value: 0 },
   { month: "Jun '24", value: 642 },
@@ -83,7 +83,7 @@ const actualGmvMonthlyData = [
 ];
 
 // Bookings Monthly Data
-const projectedBookingsMonthlyData = [
+const projectedBookingsMonthlyData: MonthlyDataItem[] = [
   { month: "Apr '24", value: 0 },
   { month: "May '24", value: 0 },
   { month: "Jun '24", value: 18 },
@@ -103,7 +103,7 @@ const projectedBookingsMonthlyData = [
 ];
 
 // Placeholder for actual bookings data (to be provided)
-const actualBookingsMonthlyData = [
+const actualBookingsMonthlyData: MonthlyDataItem[] = [
   { month: "Apr '24", value: 0 },
   { month: "May '24", value: 0 },
   { month: "Jun '24", value: 18 },
@@ -117,7 +117,7 @@ const actualBookingsMonthlyData = [
 ];
 
 // User Growth Data
-const projectedUserGrowthData = [
+const projectedUserGrowthData: UserGrowthItem[] = [
   { month: "Apr '24", learners: 1200, instructors: 12 },
   { month: "May '24", learners: 1500, instructors: 20 },
   { month: "Jun '24", learners: 1800, instructors: 35 },
@@ -133,7 +133,7 @@ const projectedUserGrowthData = [
 ];
 
 // Placeholder for actual user growth data (to be provided)
-const actualUserGrowthData = [
+const actualUserGrowthData: UserGrowthItem[] = [
   { month: "Apr '24", learners: 1200, instructors: 12 },
   { month: "May '24", learners: 1500, instructors: 20 },
   { month: "Jun '24", learners: 1800, instructors: 35 },
@@ -147,91 +147,91 @@ const actualUserGrowthData = [
 ];
 
 // Annual GMV Comparison
-const projectedAnnualGMVData = [
+const projectedAnnualGMVData: DataItem[] = [
   { name: '2024', value: 66700 },
   { name: '2025 (Projected)', value: 302600 },
 ];
 
-const actualAnnualGMVData = [
+const actualAnnualGMVData: DataItem[] = [
   { name: '2024', value: 66700 },
   // 2025 actual data will be provided later
 ];
 
 // Instructor Utilization
-const projectedUtilizationData = [
+const projectedUtilizationData: DataItem[] = [
   { name: 'Hours Taught', value: 1500 },
   { name: 'Unused Capacity', value: 46500 },
 ];
 
-const actualUtilizationData = [
+const actualUtilizationData: DataItem[] = [
   { name: 'Hours Taught', value: 1500 },
   { name: 'Unused Capacity', value: 46500 },
 ];
 
 // Operational Metrics
-const projectedOperationalMetricsData = [
+const projectedOperationalMetricsData: DataItem[] = [
   { name: 'Commission per Lesson', value: 1.81 },
   { name: 'Operational Cost per Lesson', value: 6.80 },
 ];
 
-const actualOperationalMetricsData = [
+const actualOperationalMetricsData: DataItem[] = [
   { name: 'Commission per Lesson', value: 1.81 },
   { name: 'Operational Cost per Lesson', value: 6.80 },
 ];
 
 // Supply/Demand Balance
-const projectedSupplyDemandData = [
+const projectedSupplyDemandData: DataItem[] = [
   { name: 'Learners (Active)', value: 1400 },
   { name: 'Instructors (Active)', value: 480 },
 ];
 
-const actualSupplyDemandData = [
+const actualSupplyDemandData: DataItem[] = [
   { name: 'Learners (Active)', value: 1400 },
   { name: 'Instructors (Active)', value: 480 },
 ];
 
 // CAC & LTV Data
-const projectedAcquisitionData = [
+const projectedAcquisitionData: DataItem[] = [
   { name: 'Learner CAC', value: 0.5 },
   { name: 'Instructor CAC', value: 2.5 },
   { name: 'Learner LTV (Est.)', value: 18 },
 ];
 
-const actualAcquisitionData = [
+const actualAcquisitionData: DataItem[] = [
   { name: 'Learner CAC', value: 0.5 },
   { name: 'Instructor CAC', value: 2.5 },
   { name: 'Learner LTV (Est.)', value: 18 },
 ];
 
 // Booking Status
-const projectedBookingStatusData = [
+const projectedBookingStatusData: DataItem[] = [
   { name: 'Completed Lessons', value: 91.7 },
   { name: 'Cancelled Lessons', value: 8.3 },
 ];
 
-const actualBookingStatusData = [
+const actualBookingStatusData: DataItem[] = [
   { name: 'Completed Lessons', value: 91.7 },
   { name: 'Cancelled Lessons', value: 8.3 },
 ];
 
 // LTV:CAC Comparison
-const projectedLtvCacData = [
+const projectedLtvCacData: DataItem[] = [
   { name: 'Actual (36:1)', value: 36 },
   { name: 'Benchmark (3:1)', value: 3 },
 ];
 
-const actualLtvCacData = [
+const actualLtvCacData: DataItem[] = [
   { name: 'Actual (36:1)', value: 36 },
   { name: 'Benchmark (3:1)', value: 3 },
 ];
 
 // Active vs Inactive Users
-const projectedActiveUsersData = [
+const projectedActiveUsersData: DataItem[] = [
   { name: 'Active Learners (MAU)', value: 1400 },
   { name: 'Inactive Learners', value: 7387 },
 ];
 
-const actualActiveUsersData = [
+const actualActiveUsersData: DataItem[] = [
   { name: 'Active Learners (MAU)', value: 1400 },
   { name: 'Inactive Learners', value: 7387 },
 ];
