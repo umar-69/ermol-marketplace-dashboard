@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
-  LineChart, Line, BarChart, Bar, PieChart, Pie, ScatterChart, Scatter, Cell,
+  LineChart, Line, BarChart, Bar, PieChart, Pie, Cell,
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
   RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, RadialBarChart, RadialBar
 } from 'recharts';
@@ -29,8 +29,6 @@ interface DataGapItemProps {
   title: string;
   description: string;
 }
-
-const MonthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 // Mock data based on the metrics provided
 // This would be replaced with actual data from the Excel file
@@ -144,7 +142,6 @@ const activeUsersData = [
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8', '#82ca9d', '#ffc658'];
 const RED_COLOR = '#FF6B6B';
 const GREEN_COLOR = '#4CAF50';
-const YELLOW_COLOR = '#FFC107';
 
 const MarketplaceDashboard = () => {
   const [activeTab, setActiveTab] = useState('overview');
