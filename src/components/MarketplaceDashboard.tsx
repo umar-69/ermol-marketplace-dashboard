@@ -30,12 +30,26 @@ interface DataGapItemProps {
   description: string;
 }
 
-// Mock data based on the metrics provided
-// This would be replaced with actual data from the Excel file
+// Data item interfaces
+interface DataItem {
+  name: string;
+  value: number;
+}
 
-// GMV Monthly Data (2024-2025)
+interface MonthlyDataItem {
+  month: string;
+  value: number;
+}
+
+interface UserGrowthItem {
+  month: string;
+  learners: number;
+  instructors: number;
+}
+
+// Mock data based on the metrics provided
 // Current data is used as projected data
-const projectedGmvMonthlyData = [
+const projectedGmvMonthlyData: MonthlyDataItem[] = [
   { month: "Apr '24", value: 0 },
   { month: "May '24", value: 0 },
   { month: "Jun '24", value: 642 },
@@ -232,7 +246,7 @@ const MarketplaceDashboard = () => {
   const [showProjected, setShowProjected] = useState(true);
 
   // Helper function to get the correct data based on projection toggle
-  const getData = <T extends unknown>(projectedData: T, actualData: T): T => {
+  const getData = <T,>(projectedData: T, actualData: T): T => {
     return showProjected ? projectedData : actualData;
   };
 
@@ -374,7 +388,7 @@ const MarketplaceDashboard = () => {
                   dataKey="value"
                   label={({ name, percent }) => `${name}: ${(percent * 100).toFixed(0)}%`}
                 >
-                  {supplyDemandData.map((entry: any, index: number) => (
+                  {supplyDemandData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
